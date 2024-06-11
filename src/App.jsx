@@ -6,6 +6,8 @@ import ProjectSection from "./components/ProjectSection/ProjectSection";
 import Sidebar from "./components/Sidebar/Sidebar";
 import SkillsSection from "./components/SkillsSection/SkillsSection";
 
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 function App() {
   return (
     <div className="">
@@ -15,6 +17,7 @@ function App() {
       <SkillsSection />
       <ProjectSection />
       <Contact />
+      <SpeedInsights />
     </div>
   );
 }

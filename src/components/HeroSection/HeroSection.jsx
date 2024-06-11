@@ -13,7 +13,7 @@ const HeroSection = () => {
         <p className="text-2xl md:text-4xl font-bold">
           Hi there! I&apos;m <span className="text-[#2196f3]">Manikandan</span>
         </p>
-        <h1 className="text-4xl md:text-6xl font-bold mt-5">
+        <h1 className="text-4xl md:text-5xl font-bold mt-5">
           I&apos;m a
           <span className="passion text-[#2196f3]">
             <TypeAnimation
@@ -39,10 +39,15 @@ const HeroSection = () => {
           responsive web applications using MongoDB, Express.js, React.js, and
           Node.js.
         </p>
-        <button className="mt-10 px-3 py-2 bg-[#2196f3] flex gap-3 rounded border-2 border-[#2196f3] download-btn">
-          Download CV
-          <HiOutlineDownload className="self-center" />
-        </button>
+        <a
+          href="https://drive.google.com/file/d/1MrTRnThry4DXs3G1xX0RPhzKV_OLFrdS/view"
+          target="_blank"
+        >
+          <button className="mt-10 px-3 py-2 bg-[#2196f3] flex gap-3 rounded border-2 border-[#2196f3] download-btn">
+            Download CV
+            <HiOutlineDownload className="self-center" />
+          </button>
+        </a>
       </div>
       <div className="md:w-1/2 p-3 md:p-10 self-center flex flex-col">
         <img
