@@ -42,6 +42,7 @@ const HeroSection = () => {
         <a
           href="https://drive.google.com/file/d/1MrTRnThry4DXs3G1xX0RPhzKV_OLFrdS/view"
           target="_blank"
+          className="inline-flex"
         >
           <button className="mt-10 px-3 py-2 bg-[#2196f3] flex gap-3 rounded border-2 border-[#2196f3] download-btn">
             Download CV
