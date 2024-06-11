@@ -37,7 +37,7 @@ const Contact = () => {
                 className="h-[50px] md:h-[80px] self-center"
               />
               <p className="mt-5 text-center text-xl">
-                <span className="font-semibold">Email:</span> <br />
+                <span className="font-semibold">Email</span> <br />
                 <a
                   href="mailto:manideveloper.designer@gmail.com"
                   className=" hover:underline"
