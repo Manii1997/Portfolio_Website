@@ -1,34 +1,29 @@
-.skills-section {
+.project-section {
   min-height: 100vh;
   padding-left: 8px;
   padding-right: 8px;
-  background-image: url("https://res.cloudinary.com/drdl4pdnx/image/upload/v1716564589/Portfolio-Website/bg-4_euomz6.png");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.skill-tab {
+.project-tab {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  flex: 1;
   display: grid;
-  gap: 6rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, absolute);
 }
 
 @media screen and (max-width: 768px) {
-  .skill-tab {
+  .project-tab {
     gap: 1rem;
   }
 }
 
-.tab:hover,
-.tab:active {
+.project-tab:hover,
+.project-tab:active {
   background: #2196f3;
 }
 
-.skill-tab-icon {
+.project-tab-icon {
   display: flex;
   align-items: center;
   justify-content: center;

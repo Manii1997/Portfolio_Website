@@ -1,4 +1,3 @@
-import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { HiOutlineDownload } from "react-icons/hi";
 
@@ -6,13 +5,16 @@ import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
-    <section className="hero-section md:ml-72 flex flex-col gap-10 md:flex-row justify-center bg-[#0F172A] text-white">
+    <section
+      id="home"
+      className="hero-section md:ml-72 flex flex-col gap-10 md:flex-row justify-center bg-[#0F172A] text-white"
+    >
       <div className="md:w-1/2 md:p-10 p-3 self-center ">
         <p className="text-2xl md:text-4xl font-bold">
-          Hi there! I'm <span className="text-[#2196f3]">Manikandan</span>
+          Hi there! I&apos;m <span className="text-[#2196f3]">Manikandan</span>
         </p>
         <h1 className="text-4xl md:text-6xl font-bold mt-5">
-          I'm a
+          I&apos;m a
           <span className="passion text-[#2196f3]">
             <TypeAnimation
               sequence={[

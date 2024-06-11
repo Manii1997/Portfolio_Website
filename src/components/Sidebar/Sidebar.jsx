@@ -11,6 +11,12 @@ import "./Sidebar.css";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState("/");
+
+  const handleMenuClick = (menu) => {
+    setActiveMenu(menu);
+    setIsSidebarOpen(false); // Close the sidebar after clicking on a menu item
+  };
 
   return (
     <div>
@@ -18,9 +24,7 @@ const Sidebar = () => {
 
       <div className="flex md:hidden fixed justify-between mobile-menu bg-[#1E293B] z-50">
         <div className="flex gap-4">
-          <h1 className="self-center text-white name">
-            MANI<span className="text-[#2196f3]">DEV</span>
-          </h1>
+          <h1 className="self-center text-white name">MANI</h1>
         </div>
         <div className="block md:hidden self-center cursor-pointer">
           <IoMenu
@@ -32,7 +36,7 @@ const Sidebar = () => {
 
       {/* Mobile nav menu End */}
 
-      {/* Destop sidebar Start */}
+      {/* Desktop sidebar Start */}
 
       <div
         className={`fixed flex flex-col h-full bg-[#0F172A] transition-transform duration-300 ease-in-out ${
@@ -42,9 +46,7 @@ const Sidebar = () => {
         {/* Desktop logo Section Start */}
         <div className="flex justify-between bg-[#1E293B] p-5">
           <div className="flex gap-4">
-            <h1 className="self-center text-white name">
-              MANI<span className="text-[#2196f3]">DEV</span>
-            </h1>
+            <h1 className="self-center text-white name">MANI</h1>
           </div>
           <div
             className="block self-center md:hidden cursor-pointer"
@@ -57,27 +59,57 @@ const Sidebar = () => {
 
         {/* Desktop NavLinks Start */}
         <div className="mt-5 flex flex-col gap-3 p-4 text-white grow">
-          <a href="#" className="flex gap-2 p-3 rounded nav-link">
+          <a
+            href="/"
+            onClick={() => handleMenuClick("/")}
+            className={`flex gap-2 p-3 rounded nav-link ${
+              activeMenu === "/" ? "bg-[#2196f3]" : ""
+            }`}
+          >
             <BiHome className="self-center text-xl " />
             Home
           </a>
 
-          <a href="#" className="flex gap-2 p-3 rounded nav-link">
+          <a
+            href="#about"
+            onClick={() => handleMenuClick("#about")}
+            className={`flex gap-2 p-3 rounded nav-link ${
+              activeMenu === "#about" ? "bg-[#2196f3]" : ""
+            }`}
+          >
             <TiTags className="self-center" />
             About
           </a>
 
-          <a href="#" className="flex gap-2 p-3 rounded nav-link">
+          <a
+            href="#skills"
+            onClick={() => handleMenuClick("#skills")}
+            className={`flex gap-2 p-3 rounded nav-link ${
+              activeMenu === "#skills" ? "bg-[#2196f3]" : ""
+            }`}
+          >
             <FiPenTool className="self-center" />
             Skills
           </a>
 
-          <a href="#" className="flex gap-2 p-3 rounded nav-link">
+          <a
+            href="#projects"
+            onClick={() => handleMenuClick("#projects")}
+            className={`flex gap-2 p-3 rounded nav-link ${
+              activeMenu === "#projects" ? "bg-[#2196f3]" : ""
+            }`}
+          >
             <MdOutlineWorkspacePremium className="self-center" />
-            Experience
+            Projects
           </a>
 
-          <a href="#" className="flex gap-2 p-3 rounded nav-link">
+          <a
+            href="#contact"
+            onClick={() => handleMenuClick("#contact")}
+            className={`flex gap-2 p-3 rounded nav-link ${
+              activeMenu === "#contact" ? "bg-[#2196f3]" : ""
+            }`}
+          >
             <FaRegUser className="self-center" />
             Contact
           </a>
@@ -110,7 +142,7 @@ const Sidebar = () => {
         </div>
         {/* Desktop Social media Links End */}
       </div>
-      {/* Destop sidebar End */}
+      {/* Desktop sidebar End */}
     </div>
   );
 };

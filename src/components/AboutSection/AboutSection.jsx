@@ -1,10 +1,12 @@
-import React from "react";
 import { FaLinkedin, FaGithubSquare, FaBehanceSquare } from "react-icons/fa";
 import "./AboutSection.css";
 
 const AboutSection = () => {
   return (
-    <section className="about-section py-5 md:ml-72 flex flex-col gap-10 md:flex-row justify-center bg-[#1E293B] text-white">
+    <section
+      id="about"
+      className="about-section py-5 md:ml-72 flex flex-col gap-10 md:flex-row justify-center bg-[#1E293B] text-white"
+    >
       <div className="md:w-1/2 p-3 md:p-10 self-center flex flex-col">
         <img
           src="https://res.cloudinary.com/drdl4pdnx/image/upload/v1716535454/Portfolio-Website/about-section-2_xus1g7.svg"
@@ -17,12 +19,12 @@ const AboutSection = () => {
           About <span className="text-[#2196f3]">Me</span>
         </h1>
         <p className="mt-10">
-          I've been building stuff with the MERN stack for a while now. Before
-          that, I spent a year working with WordPress. And even before that, I
-          was into graphic design for about three years.
+          I&apos;ve been building stuff with the MERN stack for a while now.
+          Before that, I spent a year working with WordPress. And even before
+          that, I was into graphic design for about three years.
         </p>
         <p className="mt-5">
-          I'm proficient in Frontend skills like React.js, Html, Css,
+          I&apos;m proficient in Frontend skills like React.js, Html, Css,
           JavaScript, Tailwind Css, Bootstrap. In backend I know Node.js,
           Express.js, MongoDB and Mongoose.
         </p>

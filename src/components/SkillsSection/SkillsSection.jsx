@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { FaHtml5 } from "react-icons/fa";
+import { useState } from "react";
 
 import "./SkillsSection.css";
 
@@ -87,28 +86,28 @@ const SKILLSDATA = [
         img: "https://res.cloudinary.com/drdl4pdnx/image/upload/v1716606884/Portfolio-Website/wordpress-icon_hqc8w1.png",
       },
       {
-        skill: "Adobe Photoshop",
+        skill: "Postman",
+        img: "https://res.cloudinary.com/drdl4pdnx/image/upload/v1716608603/Portfolio-Website/postman-icon_zpjryh.png",
+      },
+      {
+        skill: "Photoshop",
         img: "https://res.cloudinary.com/drdl4pdnx/image/upload/v1716606880/Portfolio-Website/adobe-photoshop-icon_v7dfwc.png",
       },
       {
-        skill: "Adobe Illustrator",
+        skill: "Illustrator",
         img: "https://res.cloudinary.com/drdl4pdnx/image/upload/v1716606880/Portfolio-Website/adobe-illustrator-icon_qagy80.png",
       },
       {
-        skill: "Adobe Indesign",
+        skill: "InDesign",
         img: "https://res.cloudinary.com/drdl4pdnx/image/upload/v1716606881/Portfolio-Website/indesign-icon_eoox8a.png",
       },
       {
-        skill: "Adobe XD",
+        skill: "XD",
         img: "https://res.cloudinary.com/drdl4pdnx/image/upload/v1716606881/Portfolio-Website/adobe-xd-icon_bdkft8.png",
       },
       {
         skill: "Figma",
         img: "https://res.cloudinary.com/drdl4pdnx/image/upload/v1716606884/Portfolio-Website/figma-icon_eedgt0.png",
-      },
-      {
-        skill: "Postman",
-        img: "https://res.cloudinary.com/drdl4pdnx/image/upload/v1716608603/Portfolio-Website/postman-icon_zpjryh.png",
       },
     ],
   },
@@ -121,14 +120,17 @@ const SkillsSection = () => {
   };
 
   return (
-    <section className="skills-section md:ml-72 flex flex-col gap-5 md:flex-row justify-center bg-[#0F172A] text-white py-5">
+    <section
+      id="skills"
+      className="skills-section md:ml-72 flex flex-col gap-5 md:flex-row justify-center bg-[#0F172A] text-white py-5"
+    >
       <div className="skills-tab p-3 md:w-1/2 md:p-10 self-center">
         <h1 className="text-4xl md:text-6xl font-bold">Skills</h1>
         <div className="flex flex-wrap mt-10 gap-7">
           {SKILLSDATA.map((item) => (
             <div
               key={item.title}
-              className={`tab border rounded border-[#2196f3] p-5 md:px-5 md:py-10 cursor-pointer ${
+              className={`skill-tab border rounded border-[#2196f3] text-white p-5 md:px-5 md:py-10 cursor-pointer ${
                 selectedSkill.title === item.title ? "bg-[#2196f3]" : ""
               }`}
               onClick={() => handleSelectSkill(item)}
@@ -136,11 +138,9 @@ const SkillsSection = () => {
               <img
                 src={item.icon}
                 alt={item.title}
-                width={30}
-                md:width={50}
-                className="skill-tab-icon"
+                className="skill-tab-icon w-[30px] md:w-[50]"
               />
-              <p className="font-bold text-2xl">{item.title}</p>
+              <p className="font-semibold text-xl">{item.title}</p>
             </div>
           ))}
         </div>
@@ -151,9 +151,9 @@ const SkillsSection = () => {
           {selectedSkill.title}
         </h1>
         <hr className="border-[#2196f3]" />
-        <div className="skills-list grid grid-cols-2 md:grid-cols-4 gap-4  p-3">
+        <div className="skills-list grid grid-cols-3 md:grid-cols-4 gap-4 p-3">
           {selectedSkill.skills.map((skill) => (
-            <div className="mt-5 p-4 flex flex-col">
+            <div key={skill} className="mt-5 p-4 flex flex-col">
               <p className="font-semibold self-center text-center">
                 {skill.skill}
               </p>
