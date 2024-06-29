@@ -159,25 +159,25 @@ const projectsData = [
       },
       {
         projectImg:
-          "https://res.cloudinary.com/drdl4pdnx/image/upload/v1718085993/wp-15_akupce.png",
+          "https://res.cloudinary.com/drdl4pdnx/image/upload/v1718085993/Portfolio-Website/wp-15_akupce.png",
         projectLink: "https://awetechwaterpurifier.in/",
         technology: ["WordPress", "Elementor"],
       },
       {
         projectImg:
-          "https://res.cloudinary.com/drdl4pdnx/image/upload/v1718085993/wp-16_k6qdz4.png",
+          "https://res.cloudinary.com/drdl4pdnx/image/upload/v1718085993/Portfolio-Website/wp-16_k6qdz4.png",
         projectLink: "https://cleaningguruhomeservices.com/",
         technology: ["WordPress", "Elementor"],
       },
       {
         projectImg:
-          "https://res.cloudinary.com/drdl4pdnx/image/upload/v1718085993/wp-17_crzcay.png",
+          "https://res.cloudinary.com/drdl4pdnx/image/upload/v1718085993/Portfolio-Website/wp-17_crzcay.png",
         projectLink: "https://bennysbiocoir.com/",
         technology: ["WordPress", "Elementor"],
       },
       {
         projectImg:
-          "https://res.cloudinary.com/drdl4pdnx/image/upload/v1718085993/wp-18_crnr9x.png",
+          "https://res.cloudinary.com/drdl4pdnx/image/upload/v1718085993/Portfolio-Website/wp-18_crnr9x.png",
         projectLink: "https://ssfashions.net/",
         technology: ["WordPress", "Elementor"],
       },
